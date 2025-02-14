@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: stretch;
+  }
+  
+  .card {
+    /* height:  26rem; */
+    
+    flex: 1 0 auto;
+  }
