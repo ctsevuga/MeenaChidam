@@ -59,7 +59,7 @@ const HomeScreen = () => {
                   <td>
                     <LinkContainer to={`/product/${product._id}`}>
                       <Button variant='dark' className='text-white btn-sm mx-2'>
-                        Add
+                        View
                       </Button>
                     </LinkContainer>
  

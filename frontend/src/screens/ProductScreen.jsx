@@ -93,6 +93,11 @@ console.log(productId);
                 <ListGroup.Item>
                   Description: {product.description}
                 </ListGroup.Item>
+                <ListGroup.Item>
+                <h4 className='text-danger strong'>Comments:</h4>
+                  <h6 className='text-warning strong'>{product.comments}</h6>
+                 
+                </ListGroup.Item>
               </ListGroup>
             </Col>
             <Col md={3}>

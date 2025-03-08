@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Row,
@@ -16,6 +17,7 @@ import { addToCart, removeFromCart } from "../slices/cartSlice";
 const CartScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [doorDel, setDoorDel] = useState(false);
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -32,7 +34,11 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
+    if(doorDel){
     navigate("/login?redirect=/shipping");
+  } else{
+    navigate("/login?redirect=/placeorder");
+  }
   };
 
   return (
@@ -84,7 +90,7 @@ const CartScreen = () => {
             ))}
           </ListGroup>
         )}
-        <div
+        {/* <div
           className="d-flex align-items-center 
                         justify-content-center"
         >
@@ -101,7 +107,7 @@ const CartScreen = () => {
               </Button>
             </Row>
           </Card>
-        </div>
+        </div> */}
       </Col>
       <Col md={4}>
         <Card>
